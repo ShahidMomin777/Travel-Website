@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color: rgb(35, 114, 141);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  transition:  all .2s linear;
+}
+
+*::selection {
+  background: var(--color);
+  color: #fff;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body{
+  height: 200rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgb(153, 227, 41);
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 0.2rem solid green;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  background: rgba(217, 234, 90, 0.927);
+  color: rgb(84, 99, 99);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 9%;
+  z-index: 1000;
+  background-color: rgb(15, 23, 77);
+}
+
+header .navbar .active{
+  clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #b04949;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: aquamarine;
+}
+
+header .navbar a {
+  color: #e7e0e0;
+  font-size: 2rem;
+  margin: 0 0.8rem;
+}
+
+header .navbar a:hover {
+  color: rgb(156, 156, 228);
+}
+
+.icon i {
+  font-size: 2.3rem;
+  color: rgb(232, 229, 229);
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.icon i:hover {
+  color: rgb(235, 71, 71);
+}
+
+ header .search-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: rgb(9, 9, 84);
+  border-top: .1rem solid whitesmoke;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+ header .search-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+ 
+}
+
+ .search-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  background-color: rgb(241, 192, 241);
+}
+
+.search-container label {
+  color: #edafaf;
+  cursor: pointer;
+  font-size: 2.7rem;
+  margin-left: 1.5rem;
+}
+
+.search-container label:hover {
+  color: #c52929;
+}
+
+.login-container {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(243, 243, 161);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 10px black;
+}
+
+.login-container.active {
+  top: 0;
+}
+
+.login-container form {
+  margin: 2rem;
+  padding: 1.5rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  background: #8dddeb;
+}
+
+.login-container form h3 {
+  font-size: 3rem;
+  color: #444;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.login-container form .box {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  margin: 0.6rem 0;
+  border: 0.3rem solid;
+  text-transform: none;
+}
+
+.login-container form .box:focus {
+  border-color: #281fd6;
+}
+
+.login-container form #check {
+  margin: 2rem 0;
+}
+
+.login-container form label {
+  font-size: 1.5rem;
+}
+
+.login-container form .btn {
+  display: block;
+  width: 100%;
+}
+
+.login-container form p {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #666;
+}
+
+.login-container form p a {
+  color: greenyellow;
+  font-size:2rem;
+}
+
+.login-container form p a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.login-container #form-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+  /* z-index: 200000; */
+}
+
+#menu {
+  color: #bac3e6;
+  border: 0.1rem solid rgb(227, 220, 220);
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  /* display: none; */
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 57%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menubar {
+    display: inital;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #4d4646;
+    border-top: 0.1rem solid rgba(255, 255, 255, 2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #353030;
+
+
+  }
+}
+
+@media (max-width:450px) {
+  html{
+    font-size:50%
+  }
+}
